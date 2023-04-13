@@ -1,0 +1,32 @@
+{
+	"name": "test-highcharts",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"run:dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"docker:build": "bash scripts/docker-build.sh",
+		"run:docker": "bash scripts/docker-run.sh",
+		"run:docker:windows": "docker rm -f test-highcharts && docker build -t test-highcharts . && docker run --name test-highcharts -d -p 3000:8080 test-highcharts"
+	},
+	"dependencies": {
+		"daisyui": "^2.51.5",
+		"highcharts": "^10.3.3",
+		"highcharts-react-official": "^3.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.10.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.28",
+		"@types/react-dom": "^18.0.11",
+		"@vitejs/plugin-react": "^3.1.0",
+		"autoprefixer": "^10.4.14",
+		"postcss": "^8.4.21",
+		"tailwindcss": "^3.3.1",
+		"typescript": "^4.9.3",
+		"vite": "^4.2.0"
+	}
+}
