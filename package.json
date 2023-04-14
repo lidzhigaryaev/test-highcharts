@@ -4,12 +4,12 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"run:dev": "vite",
+		"start:dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"docker:build": "bash scripts/docker-build.sh",
-		"run:docker": "bash scripts/docker-run.sh",
-		"run:docker:windows": "docker rm -f test-highcharts && docker build -t test-highcharts . && docker run --name test-highcharts -d -p 3000:8080 test-highcharts"
+		"docker:run": "bash scripts/docker-run.sh",
+		"docker:windows:run": "docker rm -f test-highcharts && docker build -t test-highcharts . && docker run --name test-highcharts -d -p 3000:8080 test-highcharts"
 	},
 	"dependencies": {
 		"daisyui": "^2.51.5",
